@@ -3,11 +3,13 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
-#minio配置
+      enabled: true
+  #minio配置 https://blog.csdn.net/qq_36856047/article/details/124154748
   minio:
-    access-key: admin
-    secret-key: cba123456cba
-    url: http://101.37.117.226:9000
+    endpoint: http://101.37.117.226:9090
+    access-key: 7v3qUvGaLweXRbw4
+    secret-key: v2ZHnvUAokuztsr3HaO0f1cpC0dkIzLW
+    url: http://101.37.117.226:22122
     bucket-name: wdhcr
   thymeleaf:
     cache: false

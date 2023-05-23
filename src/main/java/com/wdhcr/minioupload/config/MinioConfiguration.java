@@ -16,12 +16,14 @@ public class MinioConfiguration {
 
     private String url;
 
+    private String endpoint;
+
     private String bucketName;
 
     @Bean
     public MinioClient minioClient() {
         return MinioClient.builder()
-                .endpoint(url)
+                .endpoint(endpoint)
                 .credentials(accessKey, secretKey)
                 .build();
     }

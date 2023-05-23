@@ -40,6 +40,11 @@ public class UploadController {
         return R.success(url);
     }
 
+    /**
+     *
+     * @param fileName
+     * @return 这个返回的网址才能读取出照片
+     */
     @GetMapping("/url")
     public R getUrl(@RequestParam("fileName")String fileName) {
         String url = minioComp.getUrl(fileName, 7, TimeUnit.DAYS);
