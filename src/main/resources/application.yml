@@ -1,0 +1,15 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+#minio配置
+  minio:
+    access-key: admin
+    secret-key: cba123456cba
+    url: http://101.37.117.226:9000
+    bucket-name: wdhcr
+  thymeleaf:
+    cache: false
+server:
+  port: 8081
